@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+	      <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<html>
+<head>
+<title>Jan Fousek's home page</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-38006002-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+<body>
+<img style="margin-left:20px; float:right; width:220px" src="img/photo.jpg" />
+ <h1>Jan Fousek</h1>
+    Faculty of Informatics, Masaryk University<br />
+    Brno, Czech Republic
+<hr />
+<a href="index_en.html">Home</a> :: <a href="publications_en.html">Publications</a> :: <a href="projects_en.html">Projects</a>
+<h2>KAs (Kernel Assembler)</h2>
+<p>The initial aim of this source-to-source compiler was to ease the development of effective assembly of system of equations in Finite Element Method for GPGPUs in CUDA. Currently, it is able to optimize sequences of generic function mapping and reduction by balancing the distribution of the computation to particular kernels.</p>
+<p>The general workflow of the compiler is as follows:</p>
+<ul>
+<li>The user writes a set of elementary functions conforming to specific template.</li>
+<li>The library of elementary functions is automatically benchmarked under various conditions. These data serve as basis for performance prediction later.</li>
+<li>The user provides description of the computation in high-level KAS language using the elementary functions.</li>
+<li>The state-space of possible fusions of the elementary functions is automatically explored (guided by the performance prediction) and best implementation of the user code is chosen.</li>
+<li>Final CUDA code of the optimized implementation is generated.</li>
+</ul>
+<h3>Authors:</h3>
+<ul>
+<li>Jiří Filipovič: <a href="mailto:fila@mail.muni.cz">fila@mail.muni.cz</a></li>
+<li>Jan Fousek: <a href="mailto:izaak@mail.muni.cz">izaak@mail.muni.cz</a></li>
+<li>Matúš Madzin: <a href="mailto:gotti@mail.muni.cz">gotti@mail.muni.cz</a></li>
+</ul>
+<h3>Downloads:</h3>
+Comming soon.
+
+<h2>USCT-sim</h2>
+<p>USCT-sim is a fast simulation tool for ultrasound transmission tomography systems. It is written in Matlab and based on following approximations:</p>
+<ul>
+<li> <em>Discretization of the simulated volume</em> -- the volume describing the shape and material properties of the depicted phantom is discretized into regular voxels (cubes) representing areas with homogeneous material properties.</li>
+<li> <em>Straight propagation</em> -- the ultrasonic pulses are modeled along straight line between sending and receiving transducer assuming a spherical wave.</li>
+<li> <em>Transducer characteristics</em> -- the shape and size of the transducers is neglected in the simulation, however the effects the heterogeneous radiation characteristic of the transducers can be defined by the user as a function of angle-dependent frequency response.</li>
+<li> <em>Scattering effects</em> -- to simulate the reflection/scattering effects the volume is filled with large number of scattering points and the propagation of the ultrasonic pulse is computed for the first-order scattering paths (sender-scatterer-receiver).</li>
+</ul>
+
+<p>We have decoupled the computations of the direct paths and the scatterer paths to enable better distribution of workload and to improve the data locality. Currently, PBS is used to schedule the computations across available grid resources, however any suitable batch scheduler can be used instead.</p>
+
+<h3>Authors:</h3>
+<ul>
+<li>Jan Fousek: <a href="mailto:izaak@mail.muni.cz">izaak@mail.muni.cz</a></li>
+<li>Radovan Jiřík: <a href="mailto:jirik@feec.vutbr.cz">jirik@feec.vutbr.cz</a></li>
+</ul>
+<h3>Downloads:</h3>
+<ul>
+<li><a href="releases/usct-sim-current.tar.gz">usct-sim-current.tar.gz</a></li>
+<li><a href="releases/">older releases</a></li>
+</ul>
+<!--<a href="index_en.html">en</a> :: <a href="index_cz.html">cz</a> :: <a href="index_jp.html">jp</a> -->
+</body></html>
